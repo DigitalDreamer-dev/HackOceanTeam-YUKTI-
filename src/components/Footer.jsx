@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '../CSS/footer.css';
+import '../styles/footer.css';
 
 export default function Footer() {
   return (

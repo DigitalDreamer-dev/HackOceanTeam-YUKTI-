@@ -1,107 +1,51 @@
-import {
-  FaUsers,
-  FaTrash,
-  FaWater,
-  FaTree
-} from "react-icons/fa";
+import { FaUsers, FaTrash, FaWater, FaTree } from "react-icons/fa";
 
 import "../styles/dashboard.css";
 
+export default function ImpactDashboard() {
+  const stats = [
+    {
+      icon: <FaUsers />,
+      number: "1250+",
+      title: "Ocean Guardians",
+    },
 
-export default function ImpactDashboard(){
+    {
+      icon: <FaTrash />,
+      number: "8.5 Tons",
+      title: "Plastic Removed",
+    },
 
+    {
+      icon: <FaWater />,
+      number: "35",
+      title: "Beach Cleanups",
+    },
 
-const stats=[
+    {
+      icon: <FaTree />,
+      number: "120",
+      title: "Corals Restored",
+    },
+  ];
 
-{
-icon:<FaUsers/>,
-number:"1250+",
-title:"Ocean Guardians"
-},
+  return (
+    <section className="dashboard-section">
+      <h1>Our Ocean Impact 🌊</h1>
 
-{
-icon:<FaTrash/>,
-number:"8.5 Tons",
-title:"Plastic Removed"
-},
+      <p>Together we are creating measurable change.</p>
 
-{
-icon:<FaWater/>,
-number:"35",
-title:"Beach Cleanups"
-},
+      <div className="dashboard-container">
+        {stats.map((item, index) => (
+          <div className="impact-card" key={index}>
+            <div className="impact-icon">{item.icon}</div>
 
-{
-icon:<FaTree/>,
-number:"120",
-title:"Corals Restored"
-}
+            <h2>{item.number}</h2>
 
-];
-
-
-return(
-
-<section className="dashboard-section">
-
-
-<h1>
-Our Ocean Impact 🌊
-</h1>
-
-
-<p>
-Together we are creating measurable change.
-</p>
-
-
-
-<div className="dashboard-container">
-
-
-{
-
-stats.map((item,index)=>(
-
-
-<div 
-className="impact-card"
-key={index}
->
-
-
-<div className="impact-icon">
-
-{item.icon}
-
-</div>
-
-
-<h2>
-{item.number}
-</h2>
-
-
-<p>
-{item.title}
-</p>
-
-
-</div>
-
-
-))
-
-}
-
-
-</div>
-
-
-
-</section>
-
-)
-
-
+            <p>{item.title}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

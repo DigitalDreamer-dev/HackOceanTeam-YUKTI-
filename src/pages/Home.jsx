@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
-import Navbar from '../Components/Navbar';
+import Footer from "../components/Footer";
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   const [ripples, setRipples] = useState([]);
@@ -108,4 +109,5 @@ export default function Home() {
 
     </div>
   );
+  <Footer />
 }

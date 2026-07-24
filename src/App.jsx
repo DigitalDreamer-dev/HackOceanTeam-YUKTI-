@@ -2,12 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 
+import WhyOceansMatter from "./components/WhyOceansMatter";
+import LearnOcean from "./components/LearnOcean";
+import OceanVisitorGuide from "./components/OceanVisitorGuide";
+
 import PlasticCalculator from "./components/Calculator/PlasticCalculator";
-import AdoptCoralReef from "./components/AdoptCoralReef";
 import BeachCleanupMap from "./components/BeachCleanUpMap";
-import Newsletter from "./components/Newsletter";
+import AdoptCoralReef from "./components/AdoptCoralReef";
 import ImpactDashboard from "./components/ImpactDashboard";
 import GuardianPledge from "./components/GuardianPledge";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
@@ -16,14 +20,18 @@ function App() {
 
         <Route path="/" element={<Home />} />
 
+        <Route path="/why-oceans" element={<WhyOceansMatter />} />
+
+        <Route path="/learn" element={<LearnOcean />} />
+
         <Route
-          path="/calculator"
-          element={<PlasticCalculator />}
+          path="/visitor-guide"
+          element={<OceanVisitorGuide />}
         />
 
         <Route
-          path="/adopt-coral"
-          element={<AdoptCoralReef />}
+          path="/calculator"
+          element={<PlasticCalculator />}
         />
 
         <Route
@@ -32,8 +40,8 @@ function App() {
         />
 
         <Route
-          path="/newsletter"
-          element={<Newsletter />}
+          path="/adopt-coral"
+          element={<AdoptCoralReef />}
         />
 
         <Route
@@ -44,6 +52,11 @@ function App() {
         <Route
           path="/guardian-pledge"
           element={<GuardianPledge />}
+        />
+
+        <Route
+          path="/newsletter"
+          element={<Newsletter />}
         />
 
       </Routes>

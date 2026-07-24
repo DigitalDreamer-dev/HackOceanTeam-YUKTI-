@@ -3,118 +3,54 @@ import { FaEnvelope, FaCheckCircle } from "react-icons/fa";
 
 import "../styles/forms.css";
 
+export default function Newsletter() {
+  const [email, setEmail] = useState("");
 
-export default function Newsletter(){
+  const [subscribed, setSubscribed] = useState(false);
 
-const [email,setEmail]=useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-const [subscribed,setSubscribed]=useState(false);
+    if (email) {
+      setSubscribed(true);
+    }
+  };
 
+  return (
+    <section className="newsletter-section">
+      <div className="newsletter-card">
+        {subscribed ? (
+          <div className="subscribe-success">
+            <FaCheckCircle />
 
+            <h2>Thank You For Joining 🌊</h2>
 
-const handleSubmit=(e)=>{
+            <p>You will receive ocean conservation updates.</p>
+          </div>
+        ) : (
+          <>
+            <FaEnvelope className="newsletter-icon" />
 
-e.preventDefault();
+            <h2>Join Ocean Updates</h2>
 
+            <p>
+              Get conservation news, cleanup events and marine life stories.
+            </p>
 
-if(email){
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
 
-setSubscribed(true);
-
-}
-
-};
-
-
-
-return(
-
-<section className="newsletter-section">
-
-
-<div className="newsletter-card">
-
-
-{
-subscribed ?
-
-(
-
-<div className="subscribe-success">
-
-<FaCheckCircle/>
-
-<h2>
-Thank You For Joining 🌊
-</h2>
-
-<p>
-You will receive ocean conservation updates.
-</p>
-
-</div>
-
-)
-
-:
-
-(
-
-<>
-
-<FaEnvelope className="newsletter-icon"/>
-
-
-<h2>
-Join Ocean Updates
-</h2>
-
-
-<p>
-Get conservation news, cleanup events
-and marine life stories.
-</p>
-
-
-
-<form onSubmit={handleSubmit}>
-
-
-<input
-
-type="email"
-
-placeholder="Enter your email"
-
-value={email}
-
-onChange={(e)=>setEmail(e.target.value)}
-
-required
-
-/>
-
-
-<button>
-Subscribe
-</button>
-
-
-</form>
-
-</>
-
-)
-
-}
-
-
-
-</div>
-
-
-</section>
-
-)
-
+              <button>Subscribe</button>
+            </form>
+          </>
+        )}
+      </div>
+    </section>
+  );
 }

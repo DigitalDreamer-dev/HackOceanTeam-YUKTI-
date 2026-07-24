@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import '../CSS/hero.css';
+import '../styles/hero.css';
 
 export default function HeroSection() {
   return (

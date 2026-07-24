@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from './Navbar'; // Navbar import kiya gaya hai
+import Navbar from './Navbar'; 
 
 export default function LearnOcean() {
   const styles = {
