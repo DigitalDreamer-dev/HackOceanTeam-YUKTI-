@@ -1,14 +1,6 @@
-/*
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
+.calculator-section{
 
-.volunteer-section{
-
-height:100vh;
+min-height:100vh;
 
 display:flex;
 
@@ -16,215 +8,14 @@ justify-content:center;
 
 align-items:center;
 
-background:linear-gradient(135deg,#022c43,#115173,#0b6477);
-
-position:relative;
-
-overflow:hidden;
+background:linear-gradient(135deg,#023e8a,#0077b6);
 
 }
 
-.volunteer-content{
 
-text-align:center;
+.calculator-card{
 
-z-index:2;
-
-color:white;
-
-width:700px;
-
-}
-
-.volunteer-content h2{
-
-font-size:4rem;
-
-margin-bottom:20px;
-
-}
-
-.volunteer-content p{
-
-font-size:1.2rem;
-
-line-height:1.7;
-
-margin-bottom:40px;
-
-}
-
-.register-btn{
-
-padding:18px 40px;
-
-font-size:1.1rem;
-
-border:none;
-
-border-radius:50px;
-
-display:flex;
-
-gap:10px;
-
-align-items:center;
-
-justify-content:center;
-
-margin:auto;
-
-cursor:pointer;
-
-background:#00d2ff;
-
-color:white;
-
-transition:.4s;
-
-}
-
-.register-btn:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 30px cyan;
-
-}
-
-/* Bubble */
-
-.bubble{
-
-position:absolute;
-
-bottom:-100px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.2);
-
-animation:rise 12s infinite;
-
-}
-
-.bubble1{
-
-width:40px;
-
-height:40px;
-
-left:15%;
-
-}
-
-.bubble2{
-
-width:25px;
-
-height:25px;
-
-left:35%;
-
-animation-duration:8s;
-
-}
-
-.bubble3{
-
-width:60px;
-
-height:60px;
-
-left:65%;
-
-animation-duration:10s;
-
-}
-
-.bubble4{
-
-width:30px;
-
-height:30px;
-
-left:80%;
-
-animation-duration:13s;
-
-}
-
-.bubble5{
-
-width:45px;
-
-height:45px;
-
-left:50%;
-
-animation-duration:9s;
-
-}
-
-@keyframes rise{
-
-0%{
-
-transform:translateY(0);
-
-opacity:0;
-
-}
-
-50%{
-
-opacity:.8;
-
-}
-
-100%{
-
-transform:translateY(-120vh);
-
-opacity:0;
-
-}
-
-}
-
-.modal-overlay{
-
-position:fixed;
-
-inset:0;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:999;
-
-overflow:hidden;
-
-}
-
-.ocean-video{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-}
-
-.glass-form{
-
-width:420px;
+width:500px;
 
 padding:35px;
 
@@ -232,160 +23,458 @@ border-radius:25px;
 
 background:rgba(255,255,255,.15);
 
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.3);
-
-box-shadow:0 8px 40px rgba(0,0,0,.3);
-
-position:relative;
+backdrop-filter:blur(15px);
 
 color:white;
 
 }
 
-.glass-form h2{
 
-text-align:center;
-
-margin-bottom:30px;
-
-}
-
-.close-btn{
-
-position:absolute;
-
-top:15px;
-
-right:20px;
-
-background:none;
-
-border:none;
-
-font-size:24px;
-
-color:white;
-
-cursor:pointer;
-
-}
-
-.input-box{
+.calc-title{
 
 display:flex;
 
 align-items:center;
 
-gap:10px;
+gap:15px;
+
+font-size:25px;
+
+margin-bottom:20px;
+
+}
+
+
+.calc-input{
+
+margin:18px 0;
+
+}
+
+
+.calc-input label{
+
+display:block;
+
+margin-bottom:8px;
+
+}
+
+
+.calc-input input{
+
+width:100%;
 
 padding:12px;
 
-margin-bottom:18px;
-
-border-radius:12px;
-
-background:rgba(255,255,255,.15);
-
-}
-
-.input-box input{
-
-flex:1;
-
-background:none;
+border-radius:10px;
 
 border:none;
 
 outline:none;
 
-color:white;
-
-font-size:15px;
-
 }
 
-input::placeholder{
 
-color:white;
-
-}
-
-textarea{
+.calculator-card button{
 
 width:100%;
 
 padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+background:#00b4d8;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+.result-box{
+
+margin-top:25px;
+
+padding:20px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,.2);
+
+}
+
+
+.tip{
 
 margin-top:15px;
 
-border:none;
+display:flex;
 
-outline:none;
+gap:10px;
 
-resize:none;
+align-items:center;
 
-border-radius:12px;
+}
+/* Guardian Pledge */
+
+
+.pledge-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#001f3f,
+#0077b6
+);
+
+}
+
+
+.pledge-card{
+
+width:450px;
+
+padding:40px;
+
+text-align:center;
+
+color:white;
+
+border-radius:25px;
 
 background:rgba(255,255,255,.15);
 
-color:white;
+backdrop-filter:blur(15px);
 
 }
 
-textarea::placeholder{
 
-color:white;
+.pledge-icon{
+
+font-size:55px;
+
+color:#ffd60a;
+
+margin-bottom:20px;
 
 }
 
-select{
 
-width:100%;
+.pledge-card h2{
+
+margin-bottom:20px;
+
+}
+
+
+.pledge-card p{
+
+line-height:1.6;
+
+margin-bottom:25px;
+
+}
+
+
+.pledge-card button{
+
+padding:14px 35px;
+
+border:none;
+
+border-radius:30px;
+
+background:#00b4d8;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+.pledge-success svg{
+
+font-size:60px;
+
+color:#90be6d;
+
+}
+
+
+.badge{
+
+margin-top:25px;
 
 padding:15px;
 
-margin-top:10px;
+border-radius:20px;
 
-border:none;
+background:#ffd60a;
 
-outline:none;
+color:#003049;
 
-border-radius:12px;
+font-weight:bold;
 
-background:rgba(255,255,255,.15);
+}
+/* Coral Reef */
+
+.coral-section{
+
+min-height:100vh;
+
+padding:40px;
+
+text-align:center;
+
+background:linear-gradient(
+135deg,
+#023e8a,
+#0096c7
+);
 
 color:white;
 
 }
 
-.submit-btn{
+
+.coral-section h1{
+
+font-size:40px;
+
+}
+
+
+.coral-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+
+.coral-card{
+
+width:300px;
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+.leaf-icon{
+
+font-size:45px;
+
+color:#90be6d;
+
+}
+
+
+.progress-bar{
+
+height:12px;
+
+background:rgba(255,255,255,.3);
+
+border-radius:20px;
+
+margin:20px 0;
+
+overflow:hidden;
+
+}
+
+
+.progress{
+
+height:100%;
+
+background:#52b788;
+
+border-radius:20px;
+
+}
+
+
+
+.coral-card button{
 
 margin-top:20px;
 
-width:100%;
-
-padding:15px;
+padding:12px 25px;
 
 border:none;
 
-border-radius:50px;
+border-radius:25px;
 
-background:#00d2ff;
+background:#ff4d6d;
 
-font-size:18px;
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+
+
+.adopt-success{
+
+margin-top:30px;
+
+font-size:22px;
+
+background:rgba(255,255,255,.2);
+
+padding:20px;
+
+border-radius:20px;
+
+}
+/* Newsletter */
+
+
+.newsletter-section{
+
+min-height:70vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#0077b6,
+#023e8a
+);
+
+}
+
+
+.newsletter-card{
+
+width:450px;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:25px;
+
+color:white;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+.newsletter-icon{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+color:#90e0ef;
+
+}
+
+
+
+.newsletter-card p{
+
+margin:20px 0;
+
+line-height:1.5;
+
+}
+
+
+
+.newsletter-card form{
+
+display:flex;
+
+gap:10px;
+
+}
+
+
+
+.newsletter-card input{
+
+flex:1;
+
+padding:14px;
+
+border-radius:25px;
+
+border:none;
+
+outline:none;
+
+}
+
+
+
+.newsletter-card button{
+
+padding:14px 25px;
+
+border:none;
+
+border-radius:25px;
+
+background:#00b4d8;
 
 color:white;
 
 cursor:pointer;
 
-transition:.3s;
-
 }
 
-.submit-btn:hover{
 
-background:#00a5cc;
 
-}*/
+.subscribe-success svg{
+
+font-size:55px;
+
+color:#90be6d;
+
+margin-bottom:20px;
+
+}
