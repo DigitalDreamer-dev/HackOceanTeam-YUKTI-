@@ -1,157 +1,54 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Components
-import VolunteerModal from "./components/Volunteer/VolunteerModal";
+import Home from "./pages/Home";
+
 import PlasticCalculator from "./components/Calculator/PlasticCalculator";
-
 import AdoptCoralReef from "./components/AdoptCoralReef";
-import BeachCleanUpMap from "./components/BeachCleanUpMap";
+import BeachCleanupMap from "./components/BeachCleanUpMap";
 import Newsletter from "./components/Newsletter";
 import ImpactDashboard from "./components/ImpactDashboard";
 import GuardianPledge from "./components/GuardianPledge";
 
-
 function App() {
-
-  const [activeModule, setActiveModule] = useState(null);
-
-  const [showVolunteer, setShowVolunteer] = useState(false);
-
-
-  const modules = [
-
-    {
-      name: "Volunteer",
-      action: () => setShowVolunteer(true),
-    },
-
-    {
-      name: "Plastic Calculator",
-      component: <PlasticCalculator />,
-    },
-
-    {
-      name: "Adopt Coral Reef",
-      component: <AdoptCoralReef />,
-    },
-
-    {
-      name: "Beach Cleanup Map",
-      component: <BeachCleanUpMap />,
-    },
-
-    {
-      name: "Newsletter",
-      component: <Newsletter />,
-    },
-
-    {
-      name: "Impact Dashboard",
-      component: <ImpactDashboard />,
-    },
-
-    {
-      name: "Guardian Pledge",
-      component: <GuardianPledge />,
-    },
-
-  ];
-
-
-  const selectedModule = modules.find(
-    (module) => module.name === activeModule
-  );
-
-
   return (
+    <BrowserRouter>
+      <Routes>
 
-    <div>
+        <Route path="/" element={<Home />} />
 
+        <Route
+          path="/calculator"
+          element={<PlasticCalculator />}
+        />
 
-      {/* Temporary Module Navigation */}
+        <Route
+          path="/adopt-coral"
+          element={<AdoptCoralReef />}
+        />
 
-      <div
-        style={{
-          background: "#023047",
-          padding: "20px",
-          display: "flex",
-          gap: "15px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
+        <Route
+          path="/cleanup-map"
+          element={<BeachCleanupMap />}
+        />
 
-        {
-          modules.map((module) => (
+        <Route
+          path="/newsletter"
+          element={<Newsletter />}
+        />
 
-            <button
+        <Route
+          path="/impact-dashboard"
+          element={<ImpactDashboard />}
+        />
 
-              key={module.name}
+        <Route
+          path="/guardian-pledge"
+          element={<GuardianPledge />}
+        />
 
-              onClick={() => {
-
-                if(module.action){
-                  module.action();
-                }
-                else{
-                  setActiveModule(module.name);
-                }
-
-              }}
-
-              style={{
-                padding: "12px 25px",
-                borderRadius: "25px",
-                border: "none",
-                cursor: "pointer",
-                background:
-                  activeModule === module.name
-                    ? "#ffb703"
-                    : "#219ebc",
-                color: "white",
-                fontWeight: "600",
-              }}
-
-            >
-
-              {module.name}
-
-            </button>
-
-          ))
-        }
-
-
-      </div>
-
-
-
-      {/* Normal Modules */}
-
-      <div>
-
-        {selectedModule?.component}
-
-      </div>
-
-
-
-      {/* Volunteer Modal */}
-
-      <VolunteerModal
-
-        isOpen={showVolunteer}
-
-        onClose={() => setShowVolunteer(false)}
-
-      />
-
-
-    </div>
-
+      </Routes>
+    </BrowserRouter>
   );
-
 }
-
 
 export default App;
