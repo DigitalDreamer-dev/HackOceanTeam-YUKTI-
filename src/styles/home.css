@@ -1,4 +1,3 @@
-/* Poore page ka Ocean Background aur Centering */
 .home-container {
   position: relative;
   width: 100%;
@@ -157,7 +156,6 @@
   opacity: 0.8;
 }
 
-/* Alag-alag speed aur position ke liye */
 .marine-life:nth-child(6) { left: 5%; animation-duration: 15s; animation-delay: 0s; font-size: 2.2rem; }
 .marine-life:nth-child(7) { left: 35%; animation-duration: 18s; animation-delay: 4s; font-size: 3rem; }
 .marine-life:nth-child(8) { left: 70%; animation-duration: 14s; animation-delay: 2s; font-size: 2.5rem; }
@@ -179,7 +177,6 @@
   }
 }
 
-/* Niche Coral Reefs ka look dene ke liye */
 .ocean-reef-footer {
   position: absolute;
   bottom: 0;
@@ -200,13 +197,13 @@
   position: absolute;
   z-index: 2;
   pointer-events: none;
-  /* Yeh safed background ko dark blue background mein mix kar dega */
+  
   mix-blend-mode: multiply; 
   filter: contrast(120%);
   opacity: 0.95;
 }
 
-/* Pehli Machhli (Left se Right jayegi) */
+
 .fish-1 {
   top: 25%;
   left: -10%;
@@ -214,7 +211,6 @@
   animation-delay: 0s;
 }
 
-/* Kachhua (Right se Left aur thoda upar-neeche) */
 .tortoise {
   top: 60%;
   right: -10%;
@@ -223,7 +219,6 @@
   animation-delay: 2s;
 }
 
-/* Doosri Machhli */
 .fish-2 {
   top: 40%;
   left: -15%;
@@ -231,7 +226,6 @@
   animation-delay: 5s;
 }
 
-/* Teesri Machhli / Shark */
 .fish-3 {
   top: 15%;
   right: -15%;
@@ -264,7 +258,6 @@
   }
 }
 
-/* Ocean Reefs Footer Styling */
 .ocean-reef-footer {
   position: absolute;
   bottom: 0;
@@ -280,17 +273,16 @@
   font-size: 2.2rem;
   padding-bottom: 5px;
 }
-/* --- Added Feature: Small Marine Life & White Background Fix --- */
+
 .swimming-creature {
   position: absolute;
   z-index: 2;
   pointer-events: none;
-  /* Yeh line image ke peeche ke safed hisse ko bilkul gayab kar degi */
   mix-blend-mode: screen; 
   opacity: 0.9;
 }
 
-/* Har ek image ka chhota aur perfect size */
+
 .fish-1 {
   top: 25%;
   left: -100px;
@@ -301,7 +293,7 @@
 .tortoise {
   top: 65%;
   right: -120px;
-  width: 75px; /* Kachhua thoda sa balance size mein */
+  width: 75px; 
   animation: swimLeftToRight 32s infinite linear;
   animation-delay: 3s;
 }
